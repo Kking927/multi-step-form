@@ -1,64 +1,15 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Multi-Step Form</title>
 </head>
+
 <body>
-    
-    <main class="app">
-
-        <!-- Sidebar / Step Navigation -->
-        <aside class="app__sidebar">
-            <ol class="sidebar__list">
-                <li class="sidebar__item sidebar__item--active" data-step="1">
-                    <span class="sidebar__number">1</span>
-                    <div class="sidebar__content">
-                        <span class="sidebar__step-label">Step 1</span>
-                        <span class="sidebar__text">Your Info</span>
-                    </div>
-                </li>
-                
-                <li class="sidebar__item" data-step="2">
-                    <span class="sidebar__number">2</span>
-                    <div class="sidebar__content">
-                        <span class="sidebar__step-label">Step 2</span>
-                        <span class="sidebar__text">Personal Details</span>
-                    </div>
-                </li>
-
-                <li class="sidebar__item" data-step="3">
-                    <span class="sidebar__number">3</span>
-                    <div class="sidebar__content">
-                        <span class="sidebar__step-label">Step 3</span>
-                        <span class="sidebar__text">Review & Submit</span>
-                    </div>
-                </li>
-
-            </ol>
-        </aside>
-
-        <!-- Dynamic Form Card Container -->
-        <section class="app__contenet">
-            <form class="app__form" id="multi-step-form">
-
-                <!-- Step Content Goes Here -->
-                <div class="form__step form__step--active" data-step="1">
-                    <h1 class="form__title">Step 1</h1>
-                    <p class="form__description">Content for Step 1</p>
-
-                </div>
-
-                <!-- Navigation Buttons -->
-                <nav class="form__nav">
-                    <button type="button" class="form__btn form__btn--back" style="visibility: hidden;">Go Back</button>
-                    <button type="submit" class="form__btn form__btn--next">Next Step</button>
-                </nav>
-
-            </form>
-        </section>
-    </main>
-
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
 </body>
+
 </html>
