@@ -1,0 +1,12 @@
+.form__label-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.25rem;
+}
+
+.form__error {
+    color: var(--red-500);
+    font-size: 0.8125rem;
+    font-weight: bold;
+}

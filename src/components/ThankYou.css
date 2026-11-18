@@ -1,0 +1,34 @@
+/* Thank You Step Container */
+.thank-you__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    padding: 3rem 1rem;
+}
+
+/* Checkmark Icon */
+.thank-you__icon {
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 2rem;
+}
+
+/* Title */
+.thank-you__title {
+    color: var(--blue-950);
+    font-size: 2rem;
+    font-weight: var(--fw-bold);
+    margin-bottom: 1rem;
+}
+
+/* Message body */
+.thank-you__message {
+    color: var(--grey-500);
+    font-size: 1rem;
+    line-height: 1.6;
+    max-width: 450px;
+    margin: 0 auto;
+}

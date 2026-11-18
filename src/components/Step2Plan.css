@@ -1,0 +1,122 @@
+/* Plan Grid */
+.plan__grid {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Individual Plan Card */
+.plan__card {
+    flex: 1;
+    padding: 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: transparent;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.plan__card.selected {
+    border-color: var(--purple-600);
+    background-color: var(--active-bg);
+}
+
+/* Plan Icon */
+.plan__icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 2rem;
+}
+
+/* Plan Text & Details */
+.plan__name {
+    font-weight: bold;
+    color: var(--marine-blue);
+}
+
+.plan__price {
+    color: var(--cool-gray);
+    font-size: 0.875rem;
+    margin-top: 4px;
+}
+
+.plan__freebie {
+    color: var(--marine-blue);
+    font-size: 0.75rem;
+    margin-top: 4px;
+}
+
+/* Billing Toggle Container */
+.billing__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    background-color: var(--blue-50);
+    padding: 0.875rem;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    font-size: 0.875rem;
+    font-weight: var(--fw-medium);
+}
+
+.billing__label {
+    color: var(--grey-500);
+    transition: color 0.2s ease;
+}
+
+.billing__label--active {
+    color: var(--blue-950);
+    font-weight: var(--fw-bold);
+}
+
+/* Switch Track */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 2.375rem;
+    height: 1.25rem;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* Toggle Slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--blue-950);
+    transition: 0.3s;
+    border-radius: 1.25rem;
+}
+
+/* Toggle Knob */
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 0.75rem;
+    width: 0.75rem;
+    left: 0.25rem;
+    bottom: 0.25rem;
+    background-color: var(--white);
+    transition: 0.3s;
+    border-radius: 50%;
+}
+
+input:checked + .slider:before {
+    transform: translateX(1.125rem);
+}
+
+@media screen and (min-width: 60rem) {
+    .plan__grid {
+        flex-direction: row;
+        gap: 1.125rem;
+    }
+}
