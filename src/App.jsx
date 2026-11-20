@@ -133,29 +133,28 @@ function App() {
                 )}
               </>
             )}
+
+            {/* Navigation Footer moved INSIDE the form */}
+            {!isSubmitted && (
+              <nav className="form__nav">
+                <button
+                  type="button"
+                  className="form__btn form__btn--back"
+                  onClick={handleBack}
+                  style={{ visibility: currentStep === 1 ? 'hidden' : 'visible' }}
+                >
+                  Go Back
+                </button>
+                <button
+                  type="submit"
+                  className="form__btn form__btn--next"
+                >
+                  {currentStep === 4 ? 'Confirm' : 'Next Step'}
+                </button>
+              </nav>
+            )}
           </form>
         </section>
-
-        {/* Navigation Footer */}
-        {!isSubmitted && (
-          <nav className="form__nav">
-            <button
-              type="button"
-              className="form__btn form__btn--back"
-              onClick={handleBack}
-              style={{ visibility: currentStep === 1 ? 'hidden' : 'visible' }}
-            >
-              Go Back
-            </button>
-            <button
-              type="button"
-              className="form__btn form__btn--next"
-              onClick={handleNext}
-            >
-              {currentStep === 4 ? 'Confirm' : 'Next Step'}
-            </button>
-          </nav>
-        )}
       </div>
     </main>
   );
